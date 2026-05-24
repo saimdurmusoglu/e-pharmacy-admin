@@ -1,0 +1,14 @@
+.logoWrap {
+  display: flex;
+  align-items: center;
+}
+
+.logoFull {
+  width: 172px;
+  height: 44px;
+}
+
+.logoIcon {
+  width: 44px;
+  height: 44px;
+}
