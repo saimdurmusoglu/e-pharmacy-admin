@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { dashboardService } from '../../services/dashboard.service';
 import { StatusBadge } from '../../components/common/StatusBadge';
-import { IconAllProducts, IconCustomers, IconSuppliers } from '../../assets/icons';
-import type { Customer, Transaction } from '../../types';
+import { IconDatabase, IconCustomers } from '../../components/icons';
+import type { Customer, Transaction, TransactionType } from '../../types';
 import styles from './DashboardPage.module.css';
 
 interface DashboardStats {
@@ -40,14 +40,14 @@ export const DashboardPage = () => {
       <div className={styles.statsGrid}>
         <div className={`${styles.statCard} ${styles.active}`}>
           <div className={styles.statHeader}>
-            <IconAllProducts size={18} className={styles.statIcon} />
+            <IconDatabase size={18} className={styles.statIcon} />
             <span className={styles.statLabel}>All products</span>
           </div>
           <p className={styles.statValue}>{stats.products.toLocaleString()}</p>
         </div>
         <div className={styles.statCard}>
           <div className={styles.statHeader}>
-            <IconSuppliers size={18} className={styles.statIcon} />
+            <IconDatabase size={18} className={styles.statIcon} />
             <span className={styles.statLabel}>All suppliers</span>
           </div>
           <p className={styles.statValue}>{stats.suppliers}</p>
@@ -80,15 +80,15 @@ export const DashboardPage = () => {
                   <tr key={c._id}>
                     <td>
                       <div className={styles.userCell}>
-                        {c.avatar || (c as any).photo
-                          ? <img src={c.avatar || (c as any).photo} alt={c.name} className={styles.avatar} onError={e => (e.currentTarget.style.display = 'none')} />
+                        {c.avatar || c.photo
+                          ? <img src={c.avatar || c.photo} alt={c.name} className={styles.avatar} onError={e => (e.currentTarget.style.display = 'none')} />
                           : <div className={styles.avatarPlaceholder}>{c.name[0]}</div>
                         }
                         <span>{c.name}</span>
                       </div>
                     </td>
                     <td className={styles.emailCell}>{c.email}</td>
-                    <td>{c.spent || (c as any).spent}</td>
+                    <td>{c.spent}</td>
                   </tr>
                 ))}
               </tbody>
@@ -103,15 +103,20 @@ export const DashboardPage = () => {
           <div className={styles.tableWrap}>
             <p className={styles.todayLabel}>Today</p>
             <div className={styles.transactionList}>
-              {transactions.map(t => (
-                <div key={t._id} className={styles.transactionRow}>
-                  <StatusBadge status={t.type.toLowerCase() as any} variant="filled" />
-                  <span className={styles.transactionTitle}>{t.title || (t as any).name}</span>
-                  <span className={`${styles.transactionAmount} ${styles[t.type.toLowerCase()]}`}>
-                    {t.amount}
-                  </span>
-                </div>
-              ))}
+              {transactions.map(t => {
+                const type = t.type.toLowerCase() as TransactionType;
+                return (
+                  <div key={t._id} className={styles.transactionRow}>
+                    <StatusBadge status={type} variant="filled" />
+                    <span className={styles.transactionTitle}>
+                      {[t.title || t.name, t.address].filter(Boolean).join(' ')}
+                    </span>
+                    <span className={`${styles.transactionAmount} ${styles[type]}`}>
+                      {t.amount}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

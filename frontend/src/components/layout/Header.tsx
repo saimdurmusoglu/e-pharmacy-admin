@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Logo } from '../common/Logo';
-import { Icon } from '../../assets/icons/Icon';
+import { Icon } from '../icons/Icon';
 import { useAuth } from '../../hooks/useAuth';
 import { authService } from '../../services/auth.service';
 import styles from './Header.module.css';

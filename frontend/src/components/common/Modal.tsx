@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { useEffect } from 'react';
-import { IconX } from '../../assets/icons';
+import { IconX } from '../icons';
 import styles from './Modal.module.css';
 
 interface ModalProps {

@@ -92,6 +92,8 @@
 .table tr:last-child td { border-bottom: none; }
 .table tr:hover td { background: var(--color-bg); }
 
+.loadingRow td { text-align: center; padding: 24px; }
+
 .actions { display: flex; gap: var(--space-sm); align-items: center; }
 
 .editBtn, .deleteBtn {

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ordersService } from '../../services/orders.service';
 import { StatusBadge } from '../../components/common/StatusBadge';
 import { Pagination } from '../../components/common/Pagination';
-import { IconFilter } from '../../assets/icons';
+import { IconFilter } from '../../components/icons';
 import type { OrderStatus } from '../../types';
 import styles from './OrdersPage.module.css';
 

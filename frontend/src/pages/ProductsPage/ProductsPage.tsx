@@ -5,14 +5,11 @@ import * as yup from 'yup';
 import { productsService } from '../../services/products.service';
 import { Modal } from '../../components/common/Modal';
 import { Pagination } from '../../components/common/Pagination';
-import { IconFilter, IconEdit, IconTrash, IconPlus, IconChevronDown } from '../../assets/icons';
+import { IconFilter, IconEdit, IconTrash, IconPlus } from '../../components/icons';
 import type { ProductCategory } from '../../types';
+import { ProductForm } from './ProductForm';
+import type { ProductFormData } from './ProductForm';
 import styles from './ProductsPage.module.css';
-
-const CATEGORIES: ProductCategory[] = [
-  'Medicine', 'Head', 'Hand', 'Heart', 'Leg', 'Dental Care',
-  'Skin Care', 'Eye Care', 'Vitamins & Supplements', 'Orthopedic Products', 'Baby Care'
-];
 
 interface Product {
   _id: string;
@@ -32,8 +29,6 @@ const schema = yup.object({
   price: yup.string().required('Required'),
 });
 
-type FormData = { name: string; category: string; stock: string; suppliers: string; price: string; };
-
 export const ProductsPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [filterName, setFilterName] = useState('');
@@ -44,8 +39,8 @@ export const ProductsPage = () => {
   const [addOpen, setAddOpen] = useState(false);
   const [editProduct, setEditProduct] = useState<Product | null>(null);
 
-  const addForm = useForm<FormData>({ resolver: yupResolver(schema) });
-  const editForm = useForm<FormData>({ resolver: yupResolver(schema) });
+  const addForm = useForm<ProductFormData>({ resolver: yupResolver(schema) });
+  const editForm = useForm<ProductFormData>({ resolver: yupResolver(schema) });
 
   const fetchProducts = async (name = '', pageNum = 0) => {
     setLoading(true);
@@ -66,9 +61,15 @@ export const ProductsPage = () => {
 
   const handleFilter = () => { setAppliedFilter(filterName); setPage(0); };
 
-  const handleAdd = async (data: FormData) => {
+  const handleAdd = async (data: ProductFormData) => {
     try {
-      await productsService.addProduct(data as any);
+      await productsService.addProduct({
+        name: data.name,
+        category: data.category as ProductCategory,
+        stock: Number(data.stock),
+        suppliers: data.suppliers,
+        price: Number(data.price),
+      });
       setAddOpen(false);
       addForm.reset();
       fetchProducts(appliedFilter, page);
@@ -77,10 +78,16 @@ export const ProductsPage = () => {
     }
   };
 
-  const handleEdit = async (data: FormData) => {
+  const handleEdit = async (data: ProductFormData) => {
     if (!editProduct) return;
     try {
-      await productsService.updateProduct(editProduct._id, data as any);
+      await productsService.updateProduct(editProduct._id, {
+        name: data.name,
+        category: data.category as ProductCategory,
+        stock: Number(data.stock),
+        suppliers: data.suppliers,
+        price: Number(data.price),
+      });
       setEditProduct(null);
       fetchProducts(appliedFilter, page);
     } catch (err) {
@@ -107,39 +114,6 @@ export const ProductsPage = () => {
       price: product.price,
     });
   };
-
-  const ProductForm = ({ form, onSubmit, onCancel, submitLabel }: any) => (
-    <form className={styles.modalForm} onSubmit={form.handleSubmit(onSubmit)}>
-      <div className={styles.formGrid}>
-        <div className={styles.formGroup}>
-          <input {...form.register('name')} placeholder="Product Info" className={styles.modalInput} />
-          {form.formState.errors.name && <span className={styles.err}>{form.formState.errors.name.message}</span>}
-        </div>
-        <div className={styles.formGroup}>
-          <div className={styles.selectWrap}>
-            <select {...form.register('category')} className={styles.modalInput}>
-              <option value="">Category</option>
-              {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
-            </select>
-            <IconChevronDown size={14} className={styles.selectIcon} />
-          </div>
-        </div>
-        <div className={styles.formGroup}>
-          <input {...form.register('stock')} placeholder="Stock" className={styles.modalInput} />
-        </div>
-        <div className={styles.formGroup}>
-          <input {...form.register('suppliers')} placeholder="Suppliers" className={styles.modalInput} />
-        </div>
-        <div className={`${styles.formGroup} ${styles.fullWidth}`}>
-          <input {...form.register('price')} placeholder="Price" className={styles.modalInput} />
-        </div>
-      </div>
-      <div className={styles.modalBtns}>
-        <button type="submit" className={styles.saveBtn}>{submitLabel}</button>
-        <button type="button" className={styles.cancelBtn} onClick={onCancel}>Cancel</button>
-      </div>
-    </form>
-  );
 
   return (
     <div className={styles.page}>
@@ -177,7 +151,7 @@ export const ProductsPage = () => {
             </thead>
             <tbody>
               {loading ? (
-                <tr><td colSpan={6} style={{ textAlign: 'center', padding: '24px' }}>Loading...</td></tr>
+                <tr className={styles.loadingRow}><td colSpan={6}>Loading...</td></tr>
               ) : products.map(product => (
                 <tr key={product._id}>
                   <td>{product.name}</td>

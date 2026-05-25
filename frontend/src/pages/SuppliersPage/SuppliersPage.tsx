@@ -6,8 +6,10 @@ import { suppliersService } from '../../services/suppliers.service';
 import { Modal } from '../../components/common/Modal';
 import { Pagination } from '../../components/common/Pagination';
 import { StatusBadge } from '../../components/common/StatusBadge';
-import { IconFilter, IconEdit, IconChevronDown, IconCalendar } from '../../assets/icons';
+import { IconFilter, IconEdit } from '../../components/icons';
 import type { SupplierStatus } from '../../types';
+import { SupplierForm } from './SupplierForm';
+import type { SupplierFormData } from './SupplierForm';
 import styles from './SuppliersPage.module.css';
 
 interface Supplier {
@@ -30,8 +32,6 @@ const schema = yup.object({
   status: yup.string().required('Required'),
 });
 
-type FormData = { name: string; address: string; suppliers: string; date: string; amount: string; status: string; };
-
 export const SuppliersPage = () => {
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
   const [filterName, setFilterName] = useState('');
@@ -42,8 +42,8 @@ export const SuppliersPage = () => {
   const [addOpen, setAddOpen] = useState(false);
   const [editSupplier, setEditSupplier] = useState<Supplier | null>(null);
 
-  const addForm = useForm<FormData>({ resolver: yupResolver(schema) });
-  const editForm = useForm<FormData>({ resolver: yupResolver(schema) });
+  const addForm = useForm<SupplierFormData>({ resolver: yupResolver(schema) });
+  const editForm = useForm<SupplierFormData>({ resolver: yupResolver(schema) });
 
   const fetchSuppliers = async (name = '', pageNum = 0) => {
     setLoading(true);
@@ -64,9 +64,16 @@ export const SuppliersPage = () => {
 
   const handleFilter = () => { setAppliedFilter(filterName); setPage(0); };
 
-  const handleAdd = async (data: FormData) => {
+  const handleAdd = async (data: SupplierFormData) => {
     try {
-      await suppliersService.addSupplier(data as any);
+      await suppliersService.addSupplier({
+        name: data.name,
+        address: data.address,
+        company: data.suppliers,
+        deliveryDate: data.date,
+        amount: Number(data.amount),
+        status: data.status as SupplierStatus,
+      });
       setAddOpen(false);
       addForm.reset();
       fetchSuppliers(appliedFilter, page);
@@ -75,10 +82,17 @@ export const SuppliersPage = () => {
     }
   };
 
-  const handleEdit = async (data: FormData) => {
+  const handleEdit = async (data: SupplierFormData) => {
     if (!editSupplier) return;
     try {
-      await suppliersService.updateSupplier(editSupplier._id, data as any);
+      await suppliersService.updateSupplier(editSupplier._id, {
+        name: data.name,
+        address: data.address,
+        company: data.suppliers,
+        deliveryDate: data.date,
+        amount: Number(data.amount),
+        status: data.status as SupplierStatus,
+      });
       setEditSupplier(null);
       fetchSuppliers(appliedFilter, page);
     } catch (err) {
@@ -97,45 +111,6 @@ export const SuppliersPage = () => {
       status: supplier.status,
     });
   };
-
-  const SupplierForm = ({ form, onSubmit, onCancel, submitLabel }: any) => (
-    <form className={styles.modalForm} onSubmit={form.handleSubmit(onSubmit)}>
-      <div className={styles.formGrid}>
-        <div className={styles.formGroup}>
-          <input {...form.register('name')} placeholder="Suppliers Info" className={styles.modalInput} />
-        </div>
-        <div className={styles.formGroup}>
-          <input {...form.register('address')} placeholder="Address" className={styles.modalInput} />
-        </div>
-        <div className={styles.formGroup}>
-          <input {...form.register('suppliers')} placeholder="Company" className={styles.modalInput} />
-        </div>
-        <div className={styles.formGroup}>
-          <div className={styles.inputIconWrap}>
-            <input {...form.register('date')} placeholder="Delivery date" className={styles.modalInput} />
-            <IconCalendar size={14} className={styles.inputIcon} />
-          </div>
-        </div>
-        <div className={styles.formGroup}>
-          <input {...form.register('amount')} placeholder="Amount" className={styles.modalInput} />
-        </div>
-        <div className={styles.formGroup}>
-          <div className={styles.selectWrap}>
-            <select {...form.register('status')} className={styles.modalInput}>
-              <option value="">Status</option>
-              <option value="Active">Active</option>
-              <option value="Deactive">Deactive</option>
-            </select>
-            <IconChevronDown size={14} className={styles.selectIcon} />
-          </div>
-        </div>
-      </div>
-      <div className={styles.modalBtns}>
-        <button type="submit" className={styles.saveBtn}>{submitLabel}</button>
-        <button type="button" className={styles.cancelBtn} onClick={onCancel}>Cancel</button>
-      </div>
-    </form>
-  );
 
   return (
     <div className={styles.page}>
@@ -174,7 +149,7 @@ export const SuppliersPage = () => {
             </thead>
             <tbody>
               {loading ? (
-                <tr><td colSpan={7} style={{ textAlign: 'center', padding: '24px' }}>Loading...</td></tr>
+                <tr className={styles.loadingRow}><td colSpan={7}>Loading...</td></tr>
               ) : suppliers.map(supplier => (
                 <tr key={supplier._id}>
                   <td>

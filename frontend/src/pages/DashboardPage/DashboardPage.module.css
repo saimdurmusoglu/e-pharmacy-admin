@@ -63,11 +63,12 @@
 
 .tableHeader {
   background: var(--color-gray-light);
-  padding: var(--space-md) var(--space-lg);
+  padding: 14px;
 }
 
 .tableTitle {
   font-size: var(--font-size-md);
+  line-height: 31px;
   font-weight: 700;
   color: var(--color-black);
 }
@@ -79,30 +80,73 @@
 .table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .table th {
   text-align: left;
-  padding: var(--space-sm) var(--space-md);
-  font-size: var(--font-size-sm);
+  padding: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
   color: var(--color-text-secondary);
   font-weight: 500;
   border-bottom: 1px solid var(--color-gray-light);
+  border-right: 1px solid var(--color-gray-light);
 }
+
+.table th:nth-child(1) { width: 106px; }
+.table th:nth-child(2) { width: 151px; }
+.table th:nth-child(3) { width: 78px; }
 
 .table td {
-  padding: var(--space-md);
-  font-size: var(--font-size-sm);
+  padding: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
+  font-weight: 500;
   color: var(--color-black);
-  border-bottom: 1px solid var(--color-gray-light);
+  border-right: 1px solid var(--color-gray-light);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
 }
 
-.table tr:last-child td { border-bottom: none; }
+.table td::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--color-gray-light);
+}
+
+.table td:first-child::after { left: 14px; }
+.table td:last-child::after { right: 14px; }
+.table tr:last-child td::after { display: none; }
+
+.table th:last-child,
+.table td:last-child { border-right: none; }
+
+.table td:first-child { text-align: left; }
+.table td:last-child { text-align: right; }
 
 .userCell {
   display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  width: 100%;
+}
+
+.userCell span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .avatar {
@@ -133,7 +177,7 @@
 
 .transactionRow {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-md);
   padding: var(--space-md);
   border-bottom: 1px solid var(--color-gray-light);
@@ -145,9 +189,8 @@
   font-size: var(--font-size-sm);
   color: var(--color-black);
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  word-break: break-word;
+  line-height: 1.5;
 }
 
 .transactionAmount {
@@ -166,8 +209,14 @@
 }
 
 @media (max-width: 640px) {
-  .statsGrid { grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
-  .statCard { padding: var(--space-md) var(--space-sm); }
+  .statsGrid {
+    grid-template-columns: 158px 157px;
+    gap: 20px;
+  }
+  .statsGrid .statCard:last-child { grid-column: 1; }
+  .statCard { padding: var(--space-md) var(--space-sm); height: 98px; }
   .statValue { font-size: 22px; }
   .statLabel { font-size: 11px; }
+  .tablesGrid { width: 100%; }
+  .tableCard { width: 100%; }
 }

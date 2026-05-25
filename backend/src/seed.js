@@ -93,6 +93,7 @@ const seed = async () => {
     // Seed income/expenses
     const cleanTransactions = incomeExpenses.map(t => ({
       name: t.name,
+      address: t.address || '',
       amount: t.amount,
       type: t.type,
     }));

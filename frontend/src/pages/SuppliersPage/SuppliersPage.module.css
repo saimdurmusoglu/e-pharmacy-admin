@@ -46,6 +46,8 @@
 .table tr:last-child td { border-bottom: none; }
 .table tr:hover td { background: var(--color-bg); }
 
+.loadingRow td { text-align: center; padding: 24px; }
+
 .userCell { display: flex; align-items: center; gap: var(--space-sm); }
 .avatar { width: 36px; height: 36px; border-radius: var(--radius-full); object-fit: cover; flex-shrink: 0; }
 

@@ -1,4 +1,4 @@
-import sprite from "./sprite.svg";
+import sprite from "../../assets/icons/sprite.svg";
 import styles from "./Icon.module.css";
 
 type IconName =
@@ -20,7 +20,8 @@ type IconName =
   | "plus"
   | "chevron-down"
   | "eye"
-  | "eye-off";
+  | "eye-off"
+  | "database";
 
 interface IconProps {
   name: IconName;
@@ -28,7 +29,7 @@ interface IconProps {
   className?: string;
 }
 
-export const Icon = ({name, size = 20, className}: IconProps) => (
+export const Icon = ({ name, size = 20, className }: IconProps) => (
   <svg
     width={size}
     height={size}

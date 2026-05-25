@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const incomeExpenseSchema = new mongoose.Schema({
   name: { type: String, required: true },
+  address: { type: String, default: '' },
   amount: { type: String, required: true },
   type: {
     type: String,

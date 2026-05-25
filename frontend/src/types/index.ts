@@ -14,6 +14,7 @@ export interface Customer {
   registerDate: string;
   spent?: number;
   avatar?: string;
+  photo?: string;
 }
 
 export type OrderStatus = 'completed' | 'confirmed' | 'pending' | 'cancelled' | 'processing' | 'shipped' | 'delivered';
@@ -73,6 +74,8 @@ export interface Transaction {
   _id: string;
   type: TransactionType;
   title: string;
+  name?: string;
+  address?: string;
   email?: string;
   amount: number;
 }

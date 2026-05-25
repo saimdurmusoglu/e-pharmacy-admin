@@ -33,6 +33,7 @@
 
 @media (max-width: 480px) {
   .content {
-    padding: var(--space-md);
+    padding: var(--space-md) 20px;
+    overflow-x: hidden;
   }
 }

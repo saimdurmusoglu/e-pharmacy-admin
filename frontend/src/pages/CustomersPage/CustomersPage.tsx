@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { customersService } from '../../services/customers.service';
 import { Pagination } from '../../components/common/Pagination';
-import { IconFilter } from '../../assets/icons';
+import { IconFilter } from '../../components/icons';
 import styles from './CustomersPage.module.css';
 
 interface Customer {

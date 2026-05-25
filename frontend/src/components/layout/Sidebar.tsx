@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Icon } from '../../assets/icons/Icon';
+import { Icon } from '../icons/Icon';
 import { useAuth } from '../../hooks/useAuth';
 import styles from './Sidebar.module.css';
 
