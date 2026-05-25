@@ -30,6 +30,11 @@
 }
 .menuBtn:hover { background: var(--color-background); }
 
+.menuIcon {
+  width: 24px;
+  height: 16px;
+}
+
 .logoWrap {
   cursor: pointer;
   flex-shrink: 0;
