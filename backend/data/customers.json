@@ -1,6 +1,6 @@
-[
+﻿[
   {
-    "photo": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Nadia Ivanova",
     "email": "nadia.ivanova@gmail.com",
     "spent": "2,300.50",
@@ -9,7 +9,7 @@
     "register_date": "Mar 1, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Petro Kovalchuk",
     "email": "petro.kovalchuk@gmail.com",
     "spent": "3,450.75",
@@ -18,7 +18,7 @@
     "register_date": "Mar 2, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Oleksiy Shevchenko",
     "email": "oleksiy.shevchenko@gmail.com",
     "spent": "1,980.25",
@@ -27,7 +27,7 @@
     "register_date": "Mar 3, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Iryna Melnyk",
     "email": "iryna.melnyk@gmail.com",
     "spent": "2,150.00",
@@ -36,7 +36,7 @@
     "register_date": "Mar 4, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Yuriy Hrytsenko",
     "email": "yuriy.hrytsenko@gmail.com",
     "spent": "2,750.90",
@@ -45,7 +45,7 @@
     "register_date": "Mar 5, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Anastasiia Boyko",
     "email": "anastasiia.boyko@gmail.com",
     "spent": "3,200.25",
@@ -54,7 +54,7 @@
     "register_date": "Mar 6, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Dmytro Svyatogor",
     "email": "dmytro.svyatogor@gmail.com",
     "spent": "2,900.50",
@@ -63,7 +63,7 @@
     "register_date": "Mar 7, 2024"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Vira Symonenko",
     "email": "vira.symonenko@gmail.com",
     "spent": "2,450.75",
@@ -72,7 +72,7 @@
     "register_date": "Mar 8, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Serhii Romanchuk",
     "email": "serhii.romanchuk@gmail.com",
     "spent": "3,750.00",
@@ -81,7 +81,7 @@
     "register_date": "Mar 9, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Marina Kovalenko",
     "email": "marina.kovalenko@gmail.com",
     "spent": "2,850.25",
@@ -99,7 +99,7 @@
     "register_date": "Mar 11, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Yuliia Ponomarenko",
     "email": "yuliia.ponomarenko@gmail.com",
     "spent": "3,450.75",
@@ -108,7 +108,7 @@
     "register_date": "Mar 12, 2024"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Taras Tkachenko",
     "email": "taras.tkachenko@gmail.com",
     "spent": "1,980.25",
@@ -117,7 +117,7 @@
     "register_date": "Mar 13, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Nataliia Andriichuk",
     "email": "nataliia.andriichuk@gmail.com",
     "spent": "2,150.00",
@@ -126,7 +126,7 @@
     "register_date": "Mar 14, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Andrii Fedorov",
     "email": "andrii.fedorov@gmail.com",
     "spent": "2,750.90",
@@ -135,7 +135,7 @@
     "register_date": "Mar 15, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Anna Mykhailenko",
     "email": "anna.mykhailenko@gmail.com",
     "spent": "3,200.25",
@@ -144,7 +144,7 @@
     "register_date": "Mar 16, 2024"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Vitalii Sokolov",
     "email": "vitalii.sokolov@gmail.com",
     "spent": "2,900.50",
@@ -153,7 +153,7 @@
     "register_date": "Mar 17, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Alina Ponomarenko",
     "email": "alina.ponomarenko@gmail.com",
     "spent": "2,450.75",
@@ -162,7 +162,7 @@
     "register_date": "Mar 18, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Kyrylo Kovalenko",
     "email": "kyrylo.kovalenko@gmail.com",
     "spent": "3,750.00",
@@ -171,7 +171,7 @@
     "register_date": "Mar 19, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Yuliia Borysenko",
     "email": "yuliia.borysenko@gmail.com",
     "spent": "2,850.25",
@@ -180,7 +180,7 @@
     "register_date": "Mar 20, 2024"
   },
   {
-    "photo": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Yaroslav Kovalchuk",
     "email": "yaroslav.kovalchuk@gmail.com",
     "spent": "2,300.50",
@@ -189,7 +189,7 @@
     "register_date": "Mar 21, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Oksana Petrova",
     "email": "oksana.petrova@gmail.com",
     "spent": "3,450.75",
@@ -198,7 +198,7 @@
     "register_date": "Mar 22, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Roman Petrenko",
     "email": "roman.petrenko@gmail.com",
     "spent": "1,980.25",
@@ -207,7 +207,7 @@
     "register_date": "Mar 23, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Nadiia Tkachenko",
     "email": "nadiia.tkachenko@gmail.com",
     "spent": "2,150.00",
@@ -216,7 +216,7 @@
     "register_date": "Feb 24, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Oleksandr Andriievskyi",
     "email": "oleksandr.andriievskyi@gmail.com",
     "spent": "2,750.90",
@@ -225,7 +225,7 @@
     "register_date": "Feb 25, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Nina Hryshchenko",
     "email": "nina.hryshchenko@gmail.com",
     "spent": "3,200.25",
@@ -234,7 +234,7 @@
     "register_date": "Feb 26, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Serhii Mykhailenko",
     "email": "serhii.mykhailenko@gmail.com",
     "spent": "2,900.50",
@@ -243,7 +243,7 @@
     "register_date": "Feb 27, 2024"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Mariia Sokolova",
     "email": "mariia.sokolova@gmail.com",
     "spent": "2,450.75",
@@ -252,7 +252,7 @@
     "register_date": "Feb 28, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Dmytro Ponomarenko",
     "email": "dmytro.ponomarenko@gmail.com",
     "spent": "3,750.00",
@@ -261,7 +261,7 @@
     "register_date": "Feb 29, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Alina Kovalenko",
     "email": "alina.kovalenko@gmail.com",
     "spent": "2,850.25",
@@ -270,7 +270,7 @@
     "register_date": "Feb 29, 2024"
   },
   {
-    "photo": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Nadia Ivanova IV",
     "email": "nadia.ivanova@gmail.com",
     "spent": "2,890.50",
@@ -279,7 +279,7 @@
     "register_date": "Feb 15, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Petro Kovalchuk IV",
     "email": "petro.kovalchuk@gmail.com",
     "spent": "3,610.75",
@@ -288,7 +288,7 @@
     "register_date": "Feb 16, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Oleksiy Shevchenko III",
     "email": "oleksiy.shevchenko@gmail.com",
     "spent": "2,200.25",
@@ -297,7 +297,7 @@
     "register_date": "Feb 17, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Iryna Melnyk IV",
     "email": "iryna.melnyk@gmail.com",
     "spent": "2,350.00",
@@ -306,7 +306,7 @@
     "register_date": "Feb 18, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Yuriy Hrytsenko III",
     "email": "yuriy.hrytsenko@gmail.com",
     "spent": "2,850.90",
@@ -315,7 +315,7 @@
     "register_date": "Feb 19, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Anastasiia Boyko IV",
     "email": "anastasiia.boyko@gmail.com",
     "spent": "3,100.25",
@@ -324,7 +324,7 @@
     "register_date": "Feb 20, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Dmytro Svyatogor II",
     "email": "dmytro.svyatogor@gmail.com",
     "spent": "2,700.50",
@@ -333,7 +333,7 @@
     "register_date": "Feb 21, 2024"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Vira Symonenko II",
     "email": "vira.symonenko@gmail.com",
     "spent": "2,250.75",
@@ -342,7 +342,7 @@
     "register_date": "Feb 22, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Serhii Romanchuk III",
     "email": "serhii.romanchuk@gmail.com",
     "spent": "3,850.00",
@@ -351,7 +351,7 @@
     "register_date": "Feb 23, 2024"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Taras Tkachenko II",
     "email": "taras.tkachenko@gmail.com",
     "spent": "2,500.25",
@@ -360,7 +360,7 @@
     "register_date": "Dec 13, 2023"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Nataliia Andriichuk IV",
     "email": "nataliia.andriichuk@gmail.com",
     "spent": "3,100.00",
@@ -369,7 +369,7 @@
     "register_date": "Dec 14, 2023"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Andrii Fedorov IV",
     "email": "andrii.fedorov@gmail.com",
     "spent": "2,200.90",
@@ -378,7 +378,7 @@
     "register_date": "Dec 15, 2023"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Anna Mykhailenko II",
     "email": "anna.mykhailenko@gmail.com",
     "spent": "3,650.25",
@@ -387,7 +387,7 @@
     "register_date": "Dec 16, 2023"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Vitalii Sokolov III",
     "email": "vitalii.sokolov@gmail.com",
     "spent": "2,300.50",
@@ -396,7 +396,7 @@
     "register_date": "Dec 17, 2023"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Alina Ponomarenko II",
     "email": "alina.ponomarenko@gmail.com",
     "spent": "2,800.75",
@@ -405,7 +405,7 @@
     "register_date": "Dec 18, 2023"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Kyrylo Kovalenko II",
     "email": "kyrylo.kovalenko@gmail.com",
     "spent": "3,900.00",
@@ -414,7 +414,7 @@
     "register_date": "Dec 19, 2023"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Yuliia Borysenko IV",
     "email": "yuliia.borysenko@gmail.com",
     "spent": "2,600.25",
@@ -423,7 +423,7 @@
     "register_date": "Dec 20, 2023"
   },
   {
-    "photo": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Yaroslav Kovalchuk IV",
     "email": "yaroslav.kovalchuk@gmail.com",
     "spent": "2,150.50",
@@ -432,7 +432,7 @@
     "register_date": "Dec 21, 2023"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Oksana Petrova II",
     "email": "oksana.petrova@gmail.com",
     "spent": "3,300.75",
@@ -441,7 +441,7 @@
     "register_date": "Dec 22, 2023"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Roman Petrenko IV",
     "email": "roman.petrenko@gmail.com",
     "spent": "2,150.25",
@@ -450,7 +450,7 @@
     "register_date": "Dec 23, 2023"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Nadiia Tkachenko III",
     "email": "nadiia.tkachenko@gmail.com",
     "spent": "2,300.00",
@@ -459,7 +459,7 @@
     "register_date": "Dec 24, 2023"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Oleksandr Andriievskyi IV",
     "email": "oleksandr.andriievskyi@gmail.com",
     "spent": "2,500.90",
@@ -468,7 +468,7 @@
     "register_date": "Dec 25, 2023"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Nina Hryshchenko III",
     "email": "nina.hryshchenko@gmail.com",
     "spent": "3,100.25",
@@ -477,7 +477,7 @@
     "register_date": "Dec 26, 2023"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Serhii Mykhailenko IV",
     "email": "serhii.mykhailenko@gmail.com",
     "spent": "2,800.50",
@@ -486,7 +486,7 @@
     "register_date": "Dec 27, 2023"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Mariia Sokolova IV",
     "email": "mariia.sokolova@gmail.com",
     "spent": "2,350.75",
@@ -495,7 +495,7 @@
     "register_date": "Dec 28, 2023"
   },
   {
-    "photo": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Nadia Ivanova III",
     "email": "nadia.ivanova@gmail.com",
     "spent": "2,300.50",
@@ -504,7 +504,7 @@
     "register_date": "Aug 1, 2023"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Petro Kovalchuk II",
     "email": "petro.kovalchuk@gmail.com",
     "spent": "3,450.75",
@@ -513,7 +513,7 @@
     "register_date": "Aug 2, 2023"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Oleksiy Shevchenko II",
     "email": "oleksiy.shevchenko@gmail.com",
     "spent": "1,980.25",
@@ -522,7 +522,7 @@
     "register_date": "Aug 3, 2023"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Iryna Melnyk IV IV",
     "email": "iryna.melnyk@gmail.com",
     "spent": "2,150.00",
@@ -531,7 +531,7 @@
     "register_date": "Aug 4, 2023"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Yuriy Hrytsenko IV",
     "email": "yuriy.hrytsenko@gmail.com",
     "spent": "2,750.90",
@@ -540,7 +540,7 @@
     "register_date": "Aug 5, 2023"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Anastasiia Boyko II",
     "email": "anastasiia.boyko@gmail.com",
     "spent": "3,200.25",
@@ -549,7 +549,7 @@
     "register_date": "Aug 6, 2023"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Dmytro Svyatogor II IV",
     "email": "dmytro.svyatogor@gmail.com",
     "spent": "2,900.50",
@@ -558,7 +558,7 @@
     "register_date": "Aug 7, 2023"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Vira Symonenko IV",
     "email": "vira.symonenko@gmail.com",
     "spent": "2,450.75",
@@ -567,7 +567,7 @@
     "register_date": "Aug 8, 2023"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Serhii Romanchuk II",
     "email": "serhii.romanchuk@gmail.com",
     "spent": "3,750.00",
@@ -576,7 +576,7 @@
     "register_date": "Aug 9, 2023"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Marina Kovalenko IV",
     "email": "marina.kovalenko@gmail.com",
     "spent": "2,850.25",
@@ -594,7 +594,7 @@
     "register_date": "Aug 11, 2023"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Yuliia Ponomarenko II",
     "email": "yuliia.ponomarenko@gmail.com",
     "spent": "3,450.75",
@@ -603,7 +603,7 @@
     "register_date": "Aug 12, 2023"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Taras Tkachenko II III",
     "email": "taras.tkachenko@gmail.com",
     "spent": "1,980.25",
@@ -612,7 +612,7 @@
     "register_date": "Aug 13, 2023"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Nataliia Andriichuk II",
     "email": "nataliia.andriichuk@gmail.com",
     "spent": "2,150.00",
@@ -621,7 +621,7 @@
     "register_date": "Aug 14, 2023"
   },
   {
-    "photo": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Nadia Ivanova IV II",
     "email": "nadia.ivanova@gmail.com",
     "spent": "2,890.50",
@@ -630,7 +630,7 @@
     "register_date": "Feb 15, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Petro Kovalchuk III",
     "email": "petro.kovalchuk@gmail.com",
     "spent": "3,610.75",
@@ -639,7 +639,7 @@
     "register_date": "Feb 16, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Oleksiy Shevchenko IV",
     "email": "oleksiy.shevchenko@gmail.com",
     "spent": "2,200.25",
@@ -648,7 +648,7 @@
     "register_date": "Feb 17, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Iryna Melnyk IV III",
     "email": "iryna.melnyk@gmail.com",
     "spent": "2,350.00",
@@ -657,7 +657,7 @@
     "register_date": "Feb 18, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Yuriy Hrytsenko IV II",
     "email": "yuriy.hrytsenko@gmail.com",
     "spent": "2,850.90",
@@ -666,7 +666,7 @@
     "register_date": "Feb 19, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Anastasiia Boyko III",
     "email": "anastasiia.boyko@gmail.com",
     "spent": "3,100.25",
@@ -675,7 +675,7 @@
     "register_date": "Feb 20, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Dmytro Svyatogor IV",
     "email": "dmytro.svyatogor@gmail.com",
     "spent": "2,700.50",
@@ -684,7 +684,7 @@
     "register_date": "Feb 21, 2024"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Vira Symonenko III",
     "email": "vira.symonenko@gmail.com",
     "spent": "2,250.75",
@@ -693,7 +693,7 @@
     "register_date": "Feb 22, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Serhii Romanchuk IV",
     "email": "serhii.romanchuk@gmail.com",
     "spent": "3,850.00",
@@ -702,7 +702,7 @@
     "register_date": "Feb 23, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Marina Kovalenko IV II",
     "email": "marina.kovalenko@gmail.com",
     "spent": "2,850.25",
@@ -720,7 +720,7 @@
     "register_date": "Mar 11, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Yuliia Ponomarenko III",
     "email": "yuliia.ponomarenko@gmail.com",
     "spent": "3,450.75",
@@ -729,7 +729,7 @@
     "register_date": "Mar 12, 2024"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Taras Tkachenko II II",
     "email": "taras.tkachenko@gmail.com",
     "spent": "1,980.25",
@@ -738,7 +738,7 @@
     "register_date": "Mar 13, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Nataliia Andriichuk III",
     "email": "nataliia.andriichuk@gmail.com",
     "spent": "2,150.00",
@@ -747,7 +747,7 @@
     "register_date": "Mar 14, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Anatolii Zhukov",
     "email": "anatolii.zhukov@gmail.com",
     "spent": "3,200.50",
@@ -756,7 +756,7 @@
     "register_date": "Mar 15, 2024"
   },
   {
-    "image": "https://i.imgur.com/1As0akH.png1",
+    "photo": "https://i.imgur.com/1As0akH.png",
     "name": "Olena Symchuk",
     "email": "olena.symchuk@gmail.com",
     "spent": "2,450.75",
@@ -765,7 +765,7 @@
     "register_date": "Mar 16, 2024"
   },
   {
-    "image": "https://i.imgur.com/UYCE7Rr.png",
+    "photo": "https://i.imgur.com/UYCE7Rr.png",
     "name": "Viktoriya Kovalchuk",
     "email": "viktoryia.kovalchuk@gmail.com",
     "spent": "3,600.25",
@@ -774,7 +774,7 @@
     "register_date": "Mar 17, 2024"
   },
   {
-    "image": "https://i.imgur.com/hz6bZkb.png",
+    "photo": "https://i.imgur.com/hz6bZkb.png",
     "name": "Andrii Petrenko",
     "email": "andrii.petrenko@gmail.com",
     "spent": "2,900.00",
@@ -783,7 +783,7 @@
     "register_date": "Mar 18, 2024"
   },
   {
-    "image": "https://i.imgur.com/FHMKqK5.png",
+    "photo": "https://i.imgur.com/FHMKqK5.png",
     "name": "Oksana Hordiyenko",
     "email": "oksana.hordiyenko@gmail.com",
     "spent": "3,100.50",

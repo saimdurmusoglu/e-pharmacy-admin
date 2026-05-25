@@ -1,5 +1,4 @@
 import api from './api';
-import type { Supplier } from '../types';
 
 interface SuppliersParams {
   name?: string;
@@ -8,7 +7,15 @@ interface SuppliersParams {
   limit?: number;
 }
 
-type SupplierPayload = Omit<Supplier, '_id'>;
+interface SupplierPayload {
+  name: string;
+  address: string;
+  suppliers: string;
+  date: string;
+  amount: string;
+  status: string;
+  photo?: string;
+}
 
 export const suppliersService = {
   getSuppliers: async (params: SuppliersParams = {}) => {

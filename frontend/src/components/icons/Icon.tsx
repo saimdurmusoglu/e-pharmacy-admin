@@ -1,4 +1,3 @@
-import sprite from "../../assets/icons/sprite.svg";
 import styles from "./Icon.module.css";
 
 type IconName =
@@ -14,6 +13,7 @@ type IconName =
   | "edit"
   | "edit-2"
   | "trash"
+  | "trash-2"
   | "calendar"
   | "finance"
   | "mdi-users"
@@ -36,6 +36,6 @@ export const Icon = ({ name, size = 20, className }: IconProps) => (
     className={`${styles.icon} ${className ?? ""}`}
     aria-hidden="true"
   >
-    <use href={`${sprite}#icon-${name}`} />
+    <use href={`/icons.svg#icon-${name}`} />
   </svg>
 );

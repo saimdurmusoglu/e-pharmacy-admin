@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './hooks/AuthProvider';
+import { useAuth } from './hooks/useAuth';
 import { SharedLayout } from './components/layout/SharedLayout';
 import { LoginPage } from './pages/LoginPage/LoginPage';
 import { DashboardPage } from './pages/DashboardPage/DashboardPage';
@@ -9,13 +10,25 @@ import { SuppliersPage } from './pages/SuppliersPage/SuppliersPage';
 import { CustomersPage } from './pages/CustomersPage/CustomersPage';
 import './styles/global.css';
 
+const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
+  const { isAuthenticated } = useAuth();
+  return isAuthenticated ? <>{children}</> : <Navigate to="/login" replace />;
+};
+
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/" element={<SharedLayout />}>
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <SharedLayout />
+              </PrivateRoute>
+            }
+          >
             <Route index element={<Navigate to="/dashboard" replace />} />
             <Route path="dashboard" element={<DashboardPage />} />
             <Route path="orders" element={<OrdersPage />} />

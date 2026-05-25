@@ -18,7 +18,7 @@ const subtitleMap: Record<string, string> = {
 };
 
 export const Header = ({ onMenuToggle }: HeaderProps) => {
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const subtitle = subtitleMap[location.pathname] ?? 'Dashboard';
@@ -50,7 +50,7 @@ export const Header = ({ onMenuToggle }: HeaderProps) => {
               {subtitle}
             </span>
             {' '}|{' '}
-            <span className={styles.email}>vendor@gmail.com</span>
+            <span className={styles.email}>{user?.email ?? 'vendor@gmail.com'}</span>
           </p>
         </div>
       </div>

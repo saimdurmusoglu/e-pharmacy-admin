@@ -1,14 +1,14 @@
-.page { display: flex; flex-direction: column; gap: var(--space-lg); }
+﻿.page { display: flex; flex-direction: column; gap: var(--space-lg); }
 
-.filterRow { display: flex; align-items: center; gap: var(--space-md); }
+.filterRow { display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap; }
 
 .filterInput {
   height: 44px; padding: 0 var(--space-md);
   border: 1.5px solid var(--color-gray-border);
   border-radius: var(--radius-full);
-  background: var(--color-white);
+  background: var(--color-background-3);
   font-size: var(--font-size-sm);
-  outline: none; min-width: 200px;
+  outline: none; min-width: 200px; flex: 1;
   transition: border-color 0.15s;
 }
 .filterInput::placeholder { color: var(--color-text-muted); }
@@ -16,7 +16,7 @@
 
 .filterBtn {
   height: 44px; padding: 0 var(--space-lg);
-  background: var(--color-primary); color: var(--color-white);
+  background: var(--color-primary); color: var(--color-background-3);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm); font-weight: 600;
   display: flex; align-items: center; gap: 6px;
@@ -24,18 +24,29 @@
 }
 .filterBtn:hover { background: var(--color-primary-hover); }
 
-.tableCard { background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid var(--color-gray-border); overflow: hidden; }
-.tableHeader { background: var(--color-gray-light); padding: var(--space-md) var(--space-lg); }
+.tableCard { background: var(--color-background-3); border-radius: var(--radius-lg); border: 1px solid var(--color-gray-border); overflow: hidden; }
+.tableHeader { background: var(--color-background); padding: var(--space-md) var(--space-lg); }
 .tableTitle { font-size: var(--font-size-md); font-weight: 700; }
 .tableWrap { overflow-x: auto; }
 
 .table { width: 100%; border-collapse: collapse; min-width: 650px; }
-.table th { text-align: left; padding: var(--space-sm) var(--space-md); font-size: var(--font-size-sm); color: var(--color-text-secondary); font-weight: 500; border-bottom: 1px solid var(--color-gray-light); }
-.table td { padding: var(--space-md); font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-gray-light); }
+.table th { text-align: left; padding: var(--space-sm) var(--space-md); font-size: var(--font-size-sm); color: var(--color-text-secondary); font-weight: 500; border-bottom: 1px solid var(--color-background); }
+.table td { padding: var(--space-md); font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-background); }
 .table tr:last-child td { border-bottom: none; }
-.table tr:hover td { background: var(--color-bg); }
+.table tr:hover td { background: var(--color-background-2); }
 
 .userCell { display: flex; align-items: center; gap: var(--space-sm); }
 .avatar { width: 36px; height: 36px; border-radius: var(--radius-full); object-fit: cover; flex-shrink: 0; }
 .emailCell { color: var(--color-text-secondary) !important; font-size: var(--font-size-xs) !important; }
 .phoneCell { font-size: var(--font-size-xs) !important; }
+
+@media (max-width: 480px) {
+  .filterInput { min-width: 0; }
+  .filterBtn { padding: 0 var(--space-md); }
+}
+
+@media (max-width: 374px) {
+  .filterRow { gap: var(--space-sm); }
+  .filterInput { height: 38px; font-size: var(--font-size-xs); }
+  .filterBtn { height: 38px; padding: 0 var(--space-sm); font-size: var(--font-size-xs); }
+}

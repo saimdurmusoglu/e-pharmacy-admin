@@ -11,7 +11,7 @@ const getDashboard = async (req, res, next) => {
         Product.countDocuments(),
         Supplier.countDocuments(),
         Customer.countDocuments(),
-        Customer.find().sort({ createdAt: -1 }).limit(5).select('name email photo spent address'),
+        Customer.find().sort({ createdAt: -1 }).limit(5).select('name email photo spent address phone register_date'),
         IncomeExpense.find().sort({ createdAt: -1 }).limit(10),
       ]);
 

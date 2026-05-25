@@ -154,7 +154,15 @@ export const ProductsPage = () => {
                 <tr className={styles.loadingRow}><td colSpan={6}>Loading...</td></tr>
               ) : products.map(product => (
                 <tr key={product._id}>
-                  <td>{product.name}</td>
+                  <td>
+                    <div className={styles.userCell}>
+                      {product.photo
+                        ? <img src={product.photo} alt={product.name} className={styles.avatar} onError={e => (e.currentTarget.style.display = 'none')} />
+                        : <div className={styles.avatarPlaceholder}>{product.name[0]}</div>
+                      }
+                      <span>{product.name}</span>
+                    </div>
+                  </td>
                   <td>{product.category}</td>
                   <td>{product.stock}</td>
                   <td>{product.suppliers}</td>

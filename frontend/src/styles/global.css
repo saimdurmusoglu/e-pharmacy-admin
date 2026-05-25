@@ -1,37 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Colors */
+  /* ── Figma Colors ── */
   --color-primary: #59B17A;
+  --color-secondary: #E85050;
   --color-primary-10: rgba(89, 177, 122, 0.1);
   --color-primary-20: rgba(89, 177, 122, 0.2);
-  --color-primary-hover: #4a9e6b;
-  --color-danger: #E85050;
-  --color-danger-10: rgba(232, 80, 80, 0.1);
-  --color-danger-20: rgba(232, 80, 80, 0.2);
-  --color-black: #1D1E21;
+  --color-secondary-10: rgba(232, 80, 80, 0.1);
+  --color-secondary-20: rgba(232, 80, 80, 0.2);
+  --color-primary-hover: #3F945F;
+  --color-main-black: #1D1E21;
+  --color-background: #E7F1ED;
+  --color-background-2: #F7F8FA;
+  --color-background-3: #FFFFFF;
   --color-black-10: rgba(29, 30, 33, 0.1);
   --color-black-40: rgba(29, 30, 33, 0.4);
-  --color-gray-light: #E7F1ED;
-  --color-gray-mid: #DCDDD0;
+
+  /* ── Status Colors (Figma) ── */
+  --color-completed: #59B17A;
+  --color-confirmed: #8059E4;
+  --color-pending: #F79042;
+  --color-cancelled: #E85050;
+  --color-processing: #70A6E8;
+
+  /* ── Utility Colors (Figma'da tanımsız, UI için gerekli) ── */
   --color-gray-border: #DCDDE0;
-  --color-bg: #F7F8FA;
   --color-input-bg: #F9F9F9;
-  --color-white: #FFFFFF;
   --color-overlay: rgba(0, 0, 0, 0.4);
   --color-text-secondary: #8A8A8A;
   --color-text-muted: #BDBDBD;
   --color-text-neutral: #999;
-  --color-bg-neutral: #f0f0f0;
+  --color-scrollbar-thumb: #E6E6E6;
+  --color-scrollbar-track: #F1F1F1;
 
-  /* Status colors */
-  --color-completed: #59B17A;
-  --color-confirmed: #7B61FF;
-  --color-pending: #F79D3C;
-  --color-cancelled: #E85050;
-  --color-processing: #3B82F6;
-
-  /* Spacing */
+  /* ── Spacing ── */
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
@@ -39,22 +41,22 @@
   --space-xl: 32px;
   --space-2xl: 48px;
 
-  /* Border radius */
+  /* ── Border Radius ── */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
   --radius-xl: 20px;
   --radius-full: 9999px;
 
-  /* Shadows */
+  /* ── Shadows ── */
   --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
   --shadow-modal: 0 8px 40px rgba(0, 0, 0, 0.15);
 
-  /* Sidebar */
+  /* ── Layout ── */
   --sidebar-width: 80px;
   --header-height: 80px;
 
-  /* Typography */
+  /* ── Typography ── */
   --font-family: 'Nunito', sans-serif;
   --font-size-xs: 12px;
   --font-size-sm: 13px;
@@ -74,13 +76,12 @@
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--font-family);
-  background-color: var(--color-bg);
-  color: var(--color-black);
+  background-color: var(--color-background-2);
+  color: var(--color-main-black);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -117,7 +118,7 @@ ul, ol {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-bg);
+  background: var(--color-background-2);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--color-gray-border);

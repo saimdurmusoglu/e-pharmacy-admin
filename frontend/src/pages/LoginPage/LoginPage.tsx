@@ -37,7 +37,7 @@ export const LoginPage = () => {
     setError('');
     try {
       const response = await authService.login(data);
-      login(response.token);
+      login(response.token, response.user);
       navigate('/dashboard');
     } catch (err) {
       const axiosErr = err as { response?: { data?: { message?: string } } };

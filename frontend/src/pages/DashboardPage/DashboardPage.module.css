@@ -1,21 +1,25 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
 }
 
-/* Stats */
+/* ── Stat cards ── */
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
+  margin-bottom: var(--space-xl); /* 32px → tablesGrid öncesi */
 }
 
 .statCard {
-  background: var(--color-white);
+  background: var(--color-background-3);
   border-radius: var(--radius-lg);
   border: 1.5px solid var(--color-gray-border);
-  padding: var(--space-lg);
+  padding: 14px;
+  height: 98px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transition: box-shadow 0.2s;
 }
 .statCard:hover { box-shadow: var(--shadow-card); }
@@ -29,7 +33,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-bottom: var(--space-md);
+  padding-left: 6px;
 }
 
 .statIcon { color: var(--color-text-secondary); }
@@ -43,26 +47,27 @@
 .statValue {
   font-size: 32px;
   font-weight: 800;
-  color: var(--color-black);
+  color: var(--color-main-black);
   line-height: 1;
+  padding-left: 6px;
 }
 
-/* Tables */
-.tablesGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
-}
-
-.tableCard {
-  background: var(--color-white);
+/* ── Tables ── */
+.tableCard,
+.incomeCard {
+  background: var(--color-background-3);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-gray-border);
   overflow: hidden;
 }
 
+/* Income/Expenses: 40px below extScroll */
+.incomeCard {
+  margin-top: 40px;
+}
+
 .tableHeader {
-  background: var(--color-gray-light);
+  background: var(--color-background);
   padding: 14px;
 }
 
@@ -70,15 +75,34 @@
   font-size: var(--font-size-md);
   line-height: 31px;
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--color-main-black);
 }
 
+/* Table wrap — native scrollbar hidden; scroll via extScroll */
 .tableWrap {
   overflow-x: auto;
+  scrollbar-width: none;
 }
+.tableWrap::-webkit-scrollbar { display: none; }
 
+/* ── External scrollbar ── */
+.extScroll {
+  margin-top: 20px;
+  height: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: var(--radius-full);
+}
+.extScroll::-webkit-scrollbar          { height: 8px; }
+.extScroll::-webkit-scrollbar-track   { background: var(--color-scrollbar-track); border-radius: var(--radius-full); }
+.extScroll::-webkit-scrollbar-thumb   { background: var(--color-scrollbar-thumb); border-radius: var(--radius-full); }
+.extScroll::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+.extScrollInner { height: 1px; }
+
+/* ── Table ── */
 .table {
   width: 100%;
+  min-width: 695px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -91,13 +115,16 @@
   letter-spacing: 0;
   color: var(--color-text-secondary);
   font-weight: 500;
-  border-bottom: 1px solid var(--color-gray-light);
-  border-right: 1px solid var(--color-gray-light);
+  border-bottom: 1px solid var(--color-background);
+  border-right: 1px solid var(--color-background);
 }
 
 .table th:nth-child(1) { width: 106px; }
 .table th:nth-child(2) { width: 151px; }
-.table th:nth-child(3) { width: 78px; }
+.table th:nth-child(3) { width: 78px;  }
+.table th:nth-child(4) { width: 140px; }
+.table th:nth-child(5) { width: 110px; }
+.table th:nth-child(6) { width: 110px; }
 
 .table td {
   padding: 14px;
@@ -105,8 +132,8 @@
   line-height: 14px;
   letter-spacing: 0;
   font-weight: 500;
-  color: var(--color-black);
-  border-right: 1px solid var(--color-gray-light);
+  color: var(--color-main-black);
+  border-right: 1px solid var(--color-background);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -116,22 +143,20 @@
 .table td::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 0; right: 0; bottom: 0;
   height: 1px;
-  background: var(--color-gray-light);
+  background: var(--color-background);
 }
 
 .table td:first-child::after { left: 14px; }
-.table td:last-child::after { right: 14px; }
+.table td:last-child::after  { right: 14px; }
 .table tr:last-child td::after { display: none; }
 
 .table th:last-child,
 .table td:last-child { border-right: none; }
 
 .table td:first-child { text-align: left; }
-.table td:last-child { text-align: right; }
+.table td:last-child  { text-align: right; }
 
 .userCell {
   display: flex;
@@ -162,7 +187,7 @@
   font-size: var(--font-size-xs) !important;
 }
 
-/* Transactions */
+/* ── Transactions ── */
 .todayLabel {
   padding: var(--space-sm) var(--space-md);
   font-size: var(--font-size-sm);
@@ -180,14 +205,14 @@
   align-items: flex-start;
   gap: var(--space-md);
   padding: var(--space-md);
-  border-bottom: 1px solid var(--color-gray-light);
+  border-bottom: 1px solid var(--color-background);
 }
 .transactionRow:last-child { border-bottom: none; }
 
 .transactionTitle {
   flex: 1;
   font-size: var(--font-size-sm);
-  color: var(--color-black);
+  color: var(--color-main-black);
   min-width: 0;
   word-break: break-word;
   line-height: 1.5;
@@ -200,23 +225,29 @@
 }
 
 .transactionAmount.income  { color: var(--color-primary); }
-.transactionAmount.expense { color: var(--color-danger); }
+.transactionAmount.expense { color: var(--color-secondary); }
 .transactionAmount.error   { color: var(--color-text-neutral); text-decoration: line-through; }
 
-/* Responsive */
-@media (max-width: 1100px) {
-  .tablesGrid { grid-template-columns: 1fr; }
-}
-
+/* ── Responsive ── */
 @media (max-width: 640px) {
   .statsGrid {
     grid-template-columns: 158px 157px;
     gap: 20px;
   }
   .statsGrid .statCard:last-child { grid-column: 1; }
-  .statCard { padding: var(--space-md) var(--space-sm); height: 98px; }
+  .statCard  { padding: var(--space-md) var(--space-sm); height: 98px; }
   .statValue { font-size: 22px; }
   .statLabel { font-size: 11px; }
-  .tablesGrid { width: 100%; }
-  .tableCard { width: 100%; }
+}
+
+@media (max-width: 374px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+  .statsGrid .statCard:last-child { grid-column: unset; }
+  .statCard  { padding: var(--space-sm); height: 90px; }
+  .statValue { font-size: 18px; }
+  .statLabel { font-size: 10px; }
+  .statHeader { gap: var(--space-xs); margin-bottom: var(--space-sm); }
 }

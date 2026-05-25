@@ -69,9 +69,9 @@ export const SuppliersPage = () => {
       await suppliersService.addSupplier({
         name: data.name,
         address: data.address,
-        company: data.suppliers,
-        deliveryDate: data.date,
-        amount: Number(data.amount),
+        suppliers: data.suppliers,
+        date: data.date,
+        amount: data.amount,
         status: data.status as SupplierStatus,
       });
       setAddOpen(false);
@@ -88,9 +88,9 @@ export const SuppliersPage = () => {
       await suppliersService.updateSupplier(editSupplier._id, {
         name: data.name,
         address: data.address,
-        company: data.suppliers,
-        deliveryDate: data.date,
-        amount: Number(data.amount),
+        suppliers: data.suppliers,
+        date: data.date,
+        amount: data.amount,
         status: data.status as SupplierStatus,
       });
       setEditSupplier(null);

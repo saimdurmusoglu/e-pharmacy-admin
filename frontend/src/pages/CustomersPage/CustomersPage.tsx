@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { customersService } from '../../services/customers.service';
+import { Modal } from '../../components/common/Modal';
 import { Pagination } from '../../components/common/Pagination';
-import { IconFilter } from '../../components/icons';
+import { IconFilter, IconEdit } from '../../components/icons';
 import styles from './CustomersPage.module.css';
 
 interface Customer {
@@ -14,6 +18,22 @@ interface Customer {
   register_date: string;
 }
 
+interface CustomerFormData {
+  name: string;
+  email: string;
+  address: string;
+  phone: string;
+  register_date: string;
+}
+
+const schema = yup.object({
+  name: yup.string().required('Required'),
+  email: yup.string().email('Invalid email').required('Required'),
+  address: yup.string().required('Required'),
+  phone: yup.string().required('Required'),
+  register_date: yup.string().required('Required'),
+});
+
 export const CustomersPage = () => {
   const [customers, setCustomers] = useState<Customer[]>([]);
   const [filterName, setFilterName] = useState('');
@@ -21,6 +41,9 @@ export const CustomersPage = () => {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [editCustomer, setEditCustomer] = useState<Customer | null>(null);
+
+  const editForm = useForm<CustomerFormData>({ resolver: yupResolver(schema) });
 
   const fetchCustomers = async (name = '', pageNum = 0) => {
     setLoading(true);
@@ -40,6 +63,28 @@ export const CustomersPage = () => {
   }, [appliedFilter, page]);
 
   const handleFilter = () => { setAppliedFilter(filterName); setPage(0); };
+
+  const openEdit = (customer: Customer) => {
+    setEditCustomer(customer);
+    editForm.reset({
+      name: customer.name,
+      email: customer.email,
+      address: customer.address,
+      phone: customer.phone,
+      register_date: customer.register_date,
+    });
+  };
+
+  const handleEdit = async (data: CustomerFormData) => {
+    if (!editCustomer) return;
+    try {
+      await customersService.updateCustomer(editCustomer._id, data);
+      setEditCustomer(null);
+      fetchCustomers(appliedFilter, page);
+    } catch (err) {
+      console.error('Edit customer error:', err);
+    }
+  };
 
   return (
     <div className={styles.page}>
@@ -69,11 +114,12 @@ export const CustomersPage = () => {
                 <th>Address</th>
                 <th>Phone</th>
                 <th>Register date</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
               {loading ? (
-                <tr><td colSpan={5} style={{ textAlign: 'center', padding: '24px' }}>Loading...</td></tr>
+                <tr><td colSpan={6} style={{ textAlign: 'center', padding: '24px' }}>Loading...</td></tr>
               ) : customers.map(customer => (
                 <tr key={customer._id}>
                   <td>
@@ -89,6 +135,11 @@ export const CustomersPage = () => {
                   <td>{customer.address}</td>
                   <td className={styles.phoneCell}>{customer.phone}</td>
                   <td>{customer.register_date}</td>
+                  <td>
+                    <button className={styles.editBtn} onClick={() => openEdit(customer)} title="Edit">
+                      <IconEdit size={13} /> Edit
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -96,6 +147,24 @@ export const CustomersPage = () => {
         </div>
         <Pagination total={totalPages} current={page} onChange={setPage} />
       </div>
+
+      <Modal isOpen={!!editCustomer} onClose={() => setEditCustomer(null)} title="Edit customer">
+        <form onSubmit={editForm.handleSubmit(handleEdit)} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <input {...editForm.register('name')} placeholder="Name" style={{ padding: '8px 12px', borderRadius: '8px', border: '1px solid #ccc' }} />
+          <input {...editForm.register('email')} placeholder="Email" style={{ padding: '8px 12px', borderRadius: '8px', border: '1px solid #ccc' }} />
+          <input {...editForm.register('address')} placeholder="Address" style={{ padding: '8px 12px', borderRadius: '8px', border: '1px solid #ccc' }} />
+          <input {...editForm.register('phone')} placeholder="Phone" style={{ padding: '8px 12px', borderRadius: '8px', border: '1px solid #ccc' }} />
+          <input {...editForm.register('register_date')} placeholder="Register date" style={{ padding: '8px 12px', borderRadius: '8px', border: '1px solid #ccc' }} />
+          <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end', marginTop: '8px' }}>
+            <button type="button" onClick={() => setEditCustomer(null)} style={{ padding: '8px 20px', borderRadius: '8px', border: '1px solid #ccc', background: 'transparent', cursor: 'pointer' }}>
+              Cancel
+            </button>
+            <button type="submit" style={{ padding: '8px 20px', borderRadius: '8px', border: 'none', background: '#3BCE82', color: '#fff', cursor: 'pointer' }}>
+              Save
+            </button>
+          </div>
+        </form>
+      </Modal>
     </div>
   );
 };

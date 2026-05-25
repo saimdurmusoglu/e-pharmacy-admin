@@ -1,4 +1,4 @@
-.overlay {
+﻿.overlay {
   position: fixed;
   inset: 0;
   background: var(--color-overlay);
@@ -11,7 +11,7 @@
 }
 
 .modal {
-  background: var(--color-white);
+  background: var(--color-background-3);
   border-radius: var(--radius-lg);
   width: 100%;
   max-width: 480px;
@@ -29,7 +29,7 @@
 .title {
   font-size: var(--font-size-lg);
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--color-main-black);
 }
 
 .closeBtn {
@@ -43,12 +43,19 @@
   transition: background 0.15s;
 }
 .closeBtn:hover {
-  background: var(--color-bg);
-  color: var(--color-black);
+  background: var(--color-background-2);
+  color: var(--color-main-black);
 }
 
 .body {
   padding: 0 var(--space-lg) var(--space-lg);
+}
+
+@media (max-width: 374px) {
+  .overlay { padding: var(--space-sm); }
+  .header { padding: var(--space-md) var(--space-md) var(--space-sm); }
+  .title { font-size: var(--font-size-base); }
+  .body { padding: 0 var(--space-md) var(--space-md); }
 }
 
 @keyframes fadeIn {

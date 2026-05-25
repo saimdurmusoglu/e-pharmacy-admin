@@ -11,8 +11,8 @@ export interface Customer {
   email: string;
   address: string;
   phone: string;
-  registerDate: string;
-  spent?: number;
+  register_date: string;
+  spent?: string;
   avatar?: string;
   photo?: string;
 }
@@ -21,15 +21,13 @@ export type OrderStatus = 'completed' | 'confirmed' | 'pending' | 'cancelled' | 
 
 export interface Order {
   _id: string;
-  userInfo: {
-    name: string;
-    avatar?: string;
-  };
+  photo: string;
+  name: string;
   address: string;
-  products: number;
-  orderDate: string;
-  price: number;
+  products: string;
+  price: string;
   status: OrderStatus;
+  order_date: string;
 }
 
 export type ProductCategory =
@@ -59,25 +57,25 @@ export type SupplierStatus = 'active' | 'deactive';
 
 export interface Supplier {
   _id: string;
+  photo: string;
   name: string;
   address: string;
-  company: string;
-  deliveryDate: string;
-  amount: number;
+  suppliers: string;
+  date: string;
+  amount: string;
   status: SupplierStatus;
-  avatar?: string;
 }
 
 export type TransactionType = 'income' | 'expense' | 'error';
 
 export interface Transaction {
   _id: string;
-  type: TransactionType;
-  title: string;
+  type: string;
+  title?: string;
   name?: string;
   address?: string;
   email?: string;
-  amount: number;
+  amount: string;
 }
 
 export interface DashboardData {
