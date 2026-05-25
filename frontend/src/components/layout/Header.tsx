@@ -38,7 +38,7 @@ export const Header = ({ onMenuToggle }: HeaderProps) => {
     <header className={styles.header}>
       <div className={styles.left}>
         <button className={styles.menuBtn} onClick={onMenuToggle} aria-label="Toggle menu">
-          <Icon name="menu" size={22} />
+          <Icon name="menu" className={styles.menuIcon} />
         </button>
         <div className={styles.logoWrap} onClick={() => navigate('/dashboard')} role="button" tabIndex={0} aria-label="Go to dashboard">
           <Logo showText={false} />

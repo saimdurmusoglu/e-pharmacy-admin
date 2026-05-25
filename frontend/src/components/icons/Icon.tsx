@@ -26,13 +26,15 @@ type IconName =
 interface IconProps {
   name: IconName;
   size?: number;
+  width?: number;
+  height?: number;
   className?: string;
 }
 
-export const Icon = ({ name, size = 20, className }: IconProps) => (
+export const Icon = ({ name, size = 20, width, height, className }: IconProps) => (
   <svg
-    width={size}
-    height={size}
+    width={width ?? size}
+    height={height ?? size}
     className={`${styles.icon} ${className ?? ""}`}
     aria-hidden="true"
   >

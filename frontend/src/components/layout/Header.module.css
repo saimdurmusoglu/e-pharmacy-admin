@@ -1,11 +1,11 @@
-﻿.header {
+.header {
   height: var(--header-height);
   background: var(--color-background-2);
   border-bottom: 1px solid var(--color-black-10);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--space-xl);
+  padding: 0 0 0 20px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -14,13 +14,13 @@
 .left {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: 20px;
 }
 
 .menuBtn {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: var(--radius-full);
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@
   transition: background 0.15s;
   flex-shrink: 0;
 }
-.menuBtn:hover { background: var(--color-background-2); }
+.menuBtn:hover { background: var(--color-background); }
 
 .logoWrap {
   cursor: pointer;
@@ -81,19 +81,14 @@
 
 @media (max-width: 1024px) {
   .menuBtn { display: flex; }
-  .header { padding: 0 var(--space-lg); }
-  /* Mobilde logout header'dan kaldırıldı — sidebar'ın altında */
   .logoutBtn { display: none; }
 }
 
 @media (max-width: 768px) {
-  .header { padding: 0 var(--space-md); }
   .title { font-size: var(--font-size-lg); }
 }
 
 @media (max-width: 374px) {
-  .header { padding: 0 var(--space-sm); }
-  .left { gap: var(--space-sm); }
   .title { font-size: var(--font-size-base); }
   .subtitle { font-size: 11px; }
 }
